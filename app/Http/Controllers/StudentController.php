@@ -107,6 +107,7 @@ class StudentController extends Controller
         $searchcond = $request->searchcond;
     
         $student = Student::where('name',$searchcond)->first(['name','email']);
+
         
         if (!is_null($student)){
             return new StudentsResource($student);
