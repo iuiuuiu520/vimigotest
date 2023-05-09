@@ -105,7 +105,9 @@ class StudentController extends Controller
     public function findbycond(Request $request)
     {
         $searchcond = $request->searchcond;
-    
+        
+        $searchcond = trim($searchcond);
+
         $student = Student::where('name',$searchcond)->first(['name','email']);
 
         
