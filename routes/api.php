@@ -26,7 +26,7 @@ Route::middleware('auth:api')->prefix('v1')->group(function(){
     
     Route::apiResource('/students',StudentController::class);
 
-    Route::get('/students/{searchcond}',[StudentController::class,'findbycond']);
+    Route::get('/students/search/{searchcond}',[StudentController::class,'findbycond']);
 
     Route::post('/importstudents',[StudentController::class,'uploadStudents']);
 
@@ -37,5 +37,3 @@ Route::middleware('auth:api')->prefix('v1')->group(function(){
 
 
 
-// api
-Route::resource('students',StudentController::class);

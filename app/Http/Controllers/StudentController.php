@@ -104,6 +104,7 @@ class StudentController extends Controller
 
     public function findbycond(Request $request)
     {
+
         $searchcond = $request->searchcond;
         
         $searchcond = trim($searchcond);
